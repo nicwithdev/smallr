@@ -92,3 +92,53 @@ nav {
   height: 100%;
   width: 40%;
 }
+
+/* PETS INDEX */
+
+.pick-category {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.pick-category .options {
+  width: 400px;
+  height: 60px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 24px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.pick-category .options p {
+  margin: 0px 10px;
+}
+
+.category-list {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  transform: translateY(200%);
+}
+
+.list-active {
+  transform: translateY(0%);
+}
+
+.category-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.category-list li {
+  list-style: none;
+  margin: 30px;
+}
