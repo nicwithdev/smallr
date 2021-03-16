@@ -178,3 +178,17 @@ nav {
   height: 200px;
   margin-bottom: 20px;
 }
+
+/* ACCOUNT  */
+
+.signin-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.signin-error img {
+  height: 300px;
+  width: 300px;
+}

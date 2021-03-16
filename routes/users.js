@@ -4,9 +4,10 @@ const usersCtrl = require('../controllers/users');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  console.log("Hello")
   console.log(req.user);
   res.render('index.ejs', {user : req.user});
 });
+
+router.get('/account', usersCtrl.viewAccount);
 
 module.exports = router;

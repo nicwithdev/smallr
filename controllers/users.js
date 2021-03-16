@@ -2,6 +2,7 @@ const User = require('../models/user');
 
 module.exports = {
     index,
+    viewAccount,
 }
 
 function index(req, res, next) {
@@ -25,4 +26,8 @@ function index(req, res, next) {
         name: req.query.name, 
         sortKey });
     });
+  }
+
+  function viewAccount(req, res) {
+    res.render('users/account.ejs', {user: req.user})
   }

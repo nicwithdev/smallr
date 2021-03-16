@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<% if (user) { %>
+    <h1>HELLLO</h1>
+<% } else { %>
+    <div class="signin-error">
+        <img src="/images/oops.png">
+        <br />
+        <h1>Oops!</h1>
+        <h2>It looks like you still need to Log In with Google.</h2>
+    </div>
+<% } %>
+
+
+<%- include('../partials/footer') %>
