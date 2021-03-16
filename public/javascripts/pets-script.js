@@ -5,5 +5,5 @@ const listActive = document.querySelector('.list-active');
 
 // event listeners
 menu.addEventListener('click', function() {
-    list.classList.add('list-active');
+    list.classList.toggle('list-active');
 });
