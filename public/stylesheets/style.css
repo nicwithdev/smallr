@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* PARTIALS */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 30px;
+  height: 8vh;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-family: 'Pacifico', sans-serif;
+}
+
+.login {
+  border: 1px solid black;
+  border-radius: 6%;
+  background-color: #FFDCCC;
+}
+
+/* INDEX */
+
+.landing {
+  display: flex;
+  height: 92vh;
+  width: 100%;
+}
+
+.landing > .text {
+  width: 60%;
+  height: 100%;
+  margin-left: 20px;
+  position: relative;
+}
+
+.text .headlines {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.headlines h1 {
+  font-size: 80px;
+  margin: 70px 0px;
+}
+
+.headlines .view-pets-btn {
+  border: 1px solid black;
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(-50%);
+  margin: 80px 0px;
+}
+
+.landing > .landing-img {
+  background: url('/images/RABBIT2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}

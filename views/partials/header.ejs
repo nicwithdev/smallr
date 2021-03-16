@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>smallr</title>
+</head>
+<body>
+  <nav>
+    <div>
+      <h3 class="logo">smallr</h3>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="link">Home</a>
+      <a href="#" class="link">Adopt</a>
+    <% if (user) { %>
+      <a href="/logout" class="login">Log Out</a>
+    <% } else { %>
+    <a href="/auth/google" class="login">Log In with Google</a>
+    <% } %>
+  </div>
+  </nav>
+  <main>
