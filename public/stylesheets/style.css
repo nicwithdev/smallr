@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* PARTIALS */
@@ -35,13 +35,13 @@ nav {
   font-size: 28px;
   font-weight: lighter;
   letter-spacing: 2px;
-  font-family: 'Pacifico', sans-serif;
+  font-family: "Pacifico", sans-serif;
 }
 
 .login {
   border: 1px solid black;
   border-radius: 6%;
-  background-color: #FFDCCC;
+  background-color: #ffdccc;
 }
 
 /* INDEX */
@@ -73,7 +73,7 @@ nav {
 .headlines .view-pets-btn {
   border: 1px solid black;
   border-radius: 5%;
-  background-color: #FFF06A;
+  background-color: #fff06a;
   font-size: 20px;
   padding: 15px;
   position: absolute;
@@ -85,7 +85,7 @@ nav {
 }
 
 .landing > .landing-img {
-  background: url('/images/RABBIT2.jpg');
+  background: url("/images/RABBIT2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -186,7 +186,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .signin-error img {
@@ -200,7 +199,7 @@ nav {
   padding: 10px;
   text-decoration: none;
   color: black;
-  background-color: #FFF06A;
+  background-color: #fff06a;
 }
 
 .account-container {
@@ -255,7 +254,31 @@ nav {
   border-radius: 5px;
   padding: 7px;
   text-decoration: none;
-  color:whitesmoke;
+  color: whitesmoke;
   font-weight: bold;
   background-color: rgb(252, 49, 49);
+}
+
+.form-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-label {
+  font-size: 22px;
+}
+
+.form-input {
+  padding: 5px 10px;
+}
+
+.form-area {
+  resize: none;
+}
+
+.form-drop {
+  padding: 5px 10px;
+  font-size: 16px;
 }

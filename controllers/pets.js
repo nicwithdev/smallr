@@ -1,4 +1,6 @@
 const Pets = require('../models/pet');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 
 module.exports = {
@@ -10,6 +12,7 @@ module.exports = {
     viewPigs,
     viewChin,
     viewRabb,
+    create,
 }
 
 
@@ -40,3 +43,17 @@ function viewRabb(req, res) {
     res.render('pets/rabb.ejs', {user: req.user});
 }
 
+async function create(req, res) {
+    console.log(req.body);
+    await Pets.create({
+        name: req.body.name,
+        category: req.body.category,
+        age: req.body.age,
+        sex: req.body.sex,
+        location: req.body.location,
+        photo: req.body.photo,
+        description: req.body.description,
+        // user: [{type: Schema.Types.ObjectId, ref: 'User'}]
+    })
+    res.redirect('/users/account');
+}
