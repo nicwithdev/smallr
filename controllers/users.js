@@ -3,6 +3,7 @@ const User = require('../models/user');
 module.exports = {
     index,
     viewAccount,
+    addPet
 }
 
 function index(req, res, next) {
@@ -31,3 +32,7 @@ function index(req, res, next) {
   function viewAccount(req, res) {
     res.render('users/account.ejs', {user: req.user})
   }
+
+  function addPet(req, res) {
+    res.render('users/new.ejs', {user: req.user});
+}

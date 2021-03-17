@@ -10,7 +10,6 @@ module.exports = {
     viewPigs,
     viewChin,
     viewRabb,
-    
 }
 
 
@@ -40,3 +39,4 @@ function viewChin(req, res) {
 function viewRabb(req, res) {
     res.render('pets/rabb.ejs', {user: req.user});
 }
+

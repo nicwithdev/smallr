@@ -1,7 +1,29 @@
 <%- include('../partials/header') %>
 
 <% if (user) { %>
-    <h1>HELLLO</h1>
+
+    <div class="account-container">
+        <div class="add-half">
+            <a href="/users/new" class="add-new-btn">Add New Pet</a>
+        </div>
+        <div class="view-half">
+            <h2>Your Active Posts:</h2>
+            <div class="acct-gallery">
+
+                <div class="pet-edit">
+
+                    <h4>Name</h4>
+                    <h4>Category</h4>
+                    <br />
+                    <a href="#" class="edit-btn">Edit</a>
+                    <a href="#" class="delete-btn">Delete</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <% } else { %>
     <div class="signin-error">
         <img src="/images/oops.png">

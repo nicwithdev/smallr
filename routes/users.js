@@ -9,5 +9,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/account', usersCtrl.viewAccount);
+router.get('/new', usersCtrl.addPet);
 
 module.exports = router;
