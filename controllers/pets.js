@@ -1,4 +1,4 @@
-const Pets = require('../models/pet');
+const Pet = require('../models/pet');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -13,6 +13,7 @@ module.exports = {
     viewChin,
     viewRabb,
     create,
+    show
 }
 
 
@@ -21,31 +22,38 @@ function viewCat(req, res) {
     res.render('pets/index.ejs', {user: req.user});
 };
 
-function viewRats(req, res) {
-    res.render('pets/rats.ejs', {user: req.user});
+async function viewRats(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/rats.ejs', {user: req.user, pets: myPets});
 }
-function viewMice(req, res) {
-    res.render('pets/mice.ejs', {user: req.user});
+async function viewMice(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/mice.ejs', {user: req.user, pets: myPets});
 }
-function viewHams(req, res) {
-    res.render('pets/hams.ejs', {user: req.user});
+async function viewHams(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/hams.ejs', {user: req.user, pets: myPets});
 }
-function viewGerb(req, res) {
-    res.render('pets/gerb.ejs', {user: req.user});
+async function viewGerb(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/gerb.ejs', {user: req.user, pets: myPets});
 }
-function viewPigs(req, res) {
-    res.render('pets/pigs.ejs', {user: req.user});
+async function viewPigs(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/pigs.ejs', {user: req.user, pets: myPets});
 }
-function viewChin(req, res) {
-    res.render('pets/chin.ejs', {user: req.user});
+async function viewChin(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/chin.ejs', {user: req.user, pets: myPets});
 }
-function viewRabb(req, res) {
-    res.render('pets/rabb.ejs', {user: req.user});
+async function viewRabb(req, res) {
+    let myPets = await Pet.find();
+    res.render('pets/rabb.ejs', {user: req.user, pets: myPets});
 }
 
 async function create(req, res) {
     console.log(req.body);
-    await Pets.create({
+    await Pet.create({
         name: req.body.name,
         category: req.body.category,
         age: req.body.age,
@@ -53,7 +61,12 @@ async function create(req, res) {
         location: req.body.location,
         photo: req.body.photo,
         description: req.body.description,
-        // user: [{type: Schema.Types.ObjectId, ref: 'User'}]
+        userId: req.user.id
     })
     res.redirect('/users/account');
+}
+
+async function show(req, res) {
+    let result = await Pet.findById(req.params.id);
+    res.render('pets/show.ejs', {user: req.user, result: result});
 }

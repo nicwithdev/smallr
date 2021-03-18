@@ -12,6 +12,7 @@ router.get('/gerb', petsCtrl.viewGerb);
 router.get('/pigs', petsCtrl.viewPigs);
 router.get('/chin', petsCtrl.viewChin);
 router.get('/rabb', petsCtrl.viewRabb);
+router.get('/:id', petsCtrl.show);
 router.post('/new', petsCtrl.create);
 
 

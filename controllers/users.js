@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Pet = require('../models/pet');
 
 module.exports = {
     index,
@@ -19,7 +20,7 @@ function index(req, res, next) {
       if (err) return next(err);
       // Passing search values, name & sortKey, for use in the EJS
       res.render('user/index', { 
-        students, 
+       
         // below we creare a key called "user" whose value is req.user
         //req.user is the magic variable that passport creates
         //that contains the user's document
@@ -29,8 +30,11 @@ function index(req, res, next) {
     });
   }
 
-  function viewAccount(req, res) {
-    res.render('users/account.ejs', {user: req.user})
+  async function viewAccount(req, res) {
+    let myPets = await Pet.find({userId: req.user.id})
+    console.log("HELLOOOOOOOOOOOO PETS!")
+    console.log(myPets);
+    res.render('users/account.ejs', {user: req.user, myPets: myPets})
   }
 
   function addPet(req, res) {

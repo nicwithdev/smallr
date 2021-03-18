@@ -38,6 +38,11 @@ nav {
   font-family: "Pacifico", sans-serif;
 }
 
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
 .login {
   border: 1px solid black;
   border-radius: 6%;
@@ -172,12 +177,19 @@ nav {
   align-items: center;
   justify-content: center;
   margin: 50px;
+  border: 3px solid lavender;
+  border-radius: 5%;
 }
 
 .gallery-tile img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.cat-name {
+  font-size: 20px;
 }
 
 /* ACCOUNT  */
@@ -281,4 +293,68 @@ nav {
 .form-drop {
   padding: 5px 10px;
   font-size: 16px;
+}
+
+/* SHOW PAGE */
+
+.show-contain {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-img {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-img img {
+  height: 400px;
+  width: 400px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.show-img h4 {
+  font-size: 24px;
+  padding: 20px;
+}
+
+.show-info h4 {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.desc-contain {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  width: 70%;
+  font-size: 20px;
+}
+
+.email-btn {
+  text-decoration: none;
+  color: black;
+  background-color: #fff06a;
+  border: 2px solid black;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.form-btn {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5%;
+  outline: none;
 }

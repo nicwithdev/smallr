@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<div class="show-contain">
+    <div class="show-img">
+        <img src="<%= result.photo %>">
+        
+            <h4><%= result.name %></h4>
+            <div class="show-info">
+            <h4><%= result.age %></h4>
+            <h4><%= result.sex %></h4>
+            <h4><%= result.location %></h4>
+        </div>
+    </div>
+    <div class="desc-contain">
+        <div class="desc">
+            <h4><%= result.description %></h4>
+            <br />
+            <br />
+            <br />
+            <h4>Enquire:</h4>
+            <br />
+            <br />
+            <a href="mailto:<%= user.email %>" class="email-btn">Click to Email</a>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

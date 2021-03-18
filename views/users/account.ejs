@@ -10,15 +10,18 @@
             <h2>Your Active Posts:</h2>
             <div class="acct-gallery">
 
+               <% for (let pet of myPets) { %>
+
                 <div class="pet-edit">
 
-                    <h4>Name</h4>
-                    <h4>Category</h4>
+                    <h4><%= pet.name %></h4>
+                    <h4><%= pet.category %></h4>
                     <br />
                     <a href="#" class="edit-btn">Edit</a>
                     <a href="#" class="delete-btn">Delete</a>
 
                 </div>
+            <% } %>
             </div>
         </div>
     </div>

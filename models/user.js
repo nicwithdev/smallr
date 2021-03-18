@@ -6,7 +6,6 @@ var userSchema = new mongoose.Schema({
     email: String,
     avatar: String,
     googleId: String,
-    pets: [{type: Schema.Types.ObjectId, ref: 'Pet'}]
   }, {
     timestamps: true
   });
