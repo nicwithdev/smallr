@@ -82,7 +82,7 @@ async function deletePet(req, res) {
 
 async function updatePet(req, res) {
     console.log("WE HERE")
-    let updated = await Pet.findByIdAndUpdate(req.user._id, {
+    let updated = await Pet.findByIdAndUpdate(req.user.id, {
         name: req.body.name,
         category: req.body.category,
         age: req.body.age,
