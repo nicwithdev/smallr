@@ -31,11 +31,13 @@ function index(req, res, next) {
   }
 
   async function viewAccount(req, res) {
-    let myPets = await Pet.find({userId: req.user.id})
-    console.log("HELLOOOOOOOOOOOO PETS!")
-    console.log(myPets);
-    res.render('users/account.ejs', {user: req.user, myPets: myPets})
+    if (req.user) {
+      let myPets = await Pet.find({userId: req.user.id})
+      res.render('users/account.ejs', {user: req.user, myPets: myPets})
+    } else {
+      res.render("users/user-error.ejs", {user: req.user});
   }
+}
 
   function addPet(req, res) {
     res.render('users/new.ejs', {user: req.user});

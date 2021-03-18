@@ -10,7 +10,8 @@ const petSchema = new Schema({
     location: {type: String, required: true},
     photo: {type: String, required: true},
     description: String,
-    userId: {type: Schema.Types.ObjectId, ref: 'User'}
+    userId: {type: Schema.Types.ObjectId, ref: 'User'},
+    ownerEmail: {type: String }
   }, {
     timestamps: true
   });

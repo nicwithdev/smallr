@@ -1,0 +1,54 @@
+<%- include('../partials/header') %>
+
+<div class="landing">
+
+<div class="text">
+<div class="form-cont">
+<form action="/pets/:id/update?_method=PUT" method="POST">
+    <label class="form-label">Name</label>
+    <input type="text" name="name" class="form-input">
+    <br />
+    <label class="form-label">Species</label>
+    <select name="category" class="form-drop">
+      <option value="rat">Rat</option>
+      <option value="mouse">Mouse</option>
+      <option value="hamster">Hamster</option>
+      <option value="gerbil">Gerbil</option>
+      <option value="guinea pig">Guinea Pig</option>
+      <option value="chinchilla">Chinchilla</option>
+      <option value="rabbit">Rabbit</option>
+    </select>
+    <br />
+    <label class="form-label">Age</label>
+    <select name="age" class="form-drop">
+      <option value="Baby">Baby</option>
+      <option value="Young">Young</option>
+      <option value="Adult">Adult</option>
+      <option value="Senior">Senior</option>
+    </select>
+    <br />
+    <label class="form-label">Sex</label>
+    <select name="sex" class="form-drop">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <br />
+    <label class="form-label">Location</label>
+    <input type="text" name="location" class="form-input">
+    <br />
+    <label class="form-label">Photo URL</label>
+    <input type="text" name="photo" class="form-input">
+    <br />
+    <label class="form-label">Description</label>
+    <br />
+    <textarea class="form-area" name="description" rows="15" cols="40" maxlength="300"></textarea>
+    <br />
+    <input type="submit" value="Submit" class="form-btn">
+  </form>
+</div>
+</div>
+<div class="landing-img">
+</div>
+</div>
+
+<%- include('../partials/footer') %>

@@ -13,7 +13,10 @@ module.exports = {
     viewChin,
     viewRabb,
     create,
-    show
+    show,
+    deletePet,
+    updatePet,
+    updateForm
 }
 
 
@@ -61,7 +64,8 @@ async function create(req, res) {
         location: req.body.location,
         photo: req.body.photo,
         description: req.body.description,
-        userId: req.user.id
+        userId: req.user.id,
+        ownerEmail: req.user.email
     })
     res.redirect('/users/account');
 }
@@ -69,4 +73,31 @@ async function create(req, res) {
 async function show(req, res) {
     let result = await Pet.findById(req.params.id);
     res.render('pets/show.ejs', {user: req.user, result: result});
+}
+
+async function deletePet(req, res) {
+    let result = await Pet.findByIdAndDelete(req.params.id);
+    res.redirect('/users/account');
+  }
+
+async function updatePet(req, res) {
+    console.log("WE HERE")
+    let updated = await Pet.findByIdAndUpdate(req.user.id, {
+        name: req.body.name,
+        category: req.body.category,
+        age: req.body.age,
+        sex: req.body.sex,
+        location: req.body.location,
+        photo: req.body.photo,
+        description: req.body.description,
+        userId: req.user.id,
+        ownerEmail: req.user.email
+    }), 
+    updated.save();
+    console.log("AHHHHHHH")
+    res.redirect('/users/account');
+}
+
+function updateForm(req, res) {
+    res.render('pets/update', {user: req.user});
 }

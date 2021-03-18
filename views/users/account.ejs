@@ -1,7 +1,5 @@
 <%- include('../partials/header') %>
 
-<% if (user) { %>
-
     <div class="account-container">
         <div class="add-half">
             <a href="/users/new" class="add-new-btn">Add New Pet</a>
@@ -9,32 +7,24 @@
         <div class="view-half">
             <h2>Your Active Posts:</h2>
             <div class="acct-gallery">
-
+  
                <% for (let pet of myPets) { %>
-
+  
                 <div class="pet-edit">
-
+  
                     <h4><%= pet.name %></h4>
                     <h4><%= pet.category %></h4>
                     <br />
-                    <a href="#" class="edit-btn">Edit</a>
-                    <a href="#" class="delete-btn">Delete</a>
-
+                    <button class="edit-btn"><a href="/pets/<%= pet.id %>/update">Edit</a></button>
+                    <form action="/pets/<%= pet._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+  
                 </div>
             <% } %>
             </div>
         </div>
     </div>
-
-
-<% } else { %>
-    <div class="signin-error">
-        <img src="/images/oops.png">
-        <br />
-        <h1>Oops!</h1>
-        <h2>It looks like you still need to Log In with Google.</h2>
-    </div>
-<% } %>
 
 
 <%- include('../partials/footer') %>

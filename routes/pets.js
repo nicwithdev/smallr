@@ -13,8 +13,10 @@ router.get('/pigs', petsCtrl.viewPigs);
 router.get('/chin', petsCtrl.viewChin);
 router.get('/rabb', petsCtrl.viewRabb);
 router.get('/:id', petsCtrl.show);
+router.get('/:id/update', petsCtrl.updateForm);
 router.post('/new', petsCtrl.create);
-
+router.delete('/:id', petsCtrl.deletePet);
+router.put('/:id/update', petsCtrl.updatePet);
 
 
 
