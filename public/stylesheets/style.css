@@ -367,12 +367,21 @@ nav {
 }
 
 .email-btn {
-  text-decoration: none;
-  color: black;
   background-color: #fff06a;
   border: 2px solid black;
   border-radius: 5%;
   padding: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.email-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.email-btn:hover {
+  transform: translateY(-5%);
 }
 
 .form-btn {

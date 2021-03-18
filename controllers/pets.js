@@ -82,7 +82,7 @@ async function deletePet(req, res) {
 
 async function updatePet(req, res) {
     console.log("WE HERE")
-    let updated = await Pet.findByIdAndUpdate(req.user.id, {
+    let updated = await Pet.findByIdAndUpdate(req.user._id, {
         name: req.body.name,
         category: req.body.category,
         age: req.body.age,
@@ -92,8 +92,8 @@ async function updatePet(req, res) {
         description: req.body.description,
         userId: req.user.id,
         ownerEmail: req.user.email
-    }), 
-    updated.save();
+    });
+    await updated.save();
     console.log("AHHHHHHH")
     res.redirect('/users/account');
 }
