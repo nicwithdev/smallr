@@ -55,7 +55,6 @@ async function viewRabb(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body);
     await Pet.create({
         name: req.body.name,
         category: req.body.category,
@@ -81,7 +80,6 @@ async function deletePet(req, res) {
   }
 
 async function updatePet(req, res) {
-    console.log("WE HERE")
     let updated = await Pet.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         category: req.body.category,
@@ -93,7 +91,6 @@ async function updatePet(req, res) {
         userId: req.user.id,
         ownerEmail: req.user.email
     });
-    console.log("AHHHHHHH")
     res.redirect('/users/account');
 }
 
