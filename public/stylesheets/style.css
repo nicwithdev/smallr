@@ -272,6 +272,12 @@ nav {
   text-align: center;
 }
 
+.pet-edit img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 .edit-btn {
   border: 1px solid black;
   border-radius: 5px;
