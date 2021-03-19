@@ -82,7 +82,7 @@ async function deletePet(req, res) {
 
 async function updatePet(req, res) {
     console.log("WE HERE")
-    let updated = await Pet.findByIdAndUpdate(req.user.id, {
+    let updated = await Pet.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         category: req.body.category,
         age: req.body.age,
@@ -93,11 +93,11 @@ async function updatePet(req, res) {
         userId: req.user.id,
         ownerEmail: req.user.email
     });
-    await updated.save();
     console.log("AHHHHHHH")
     res.redirect('/users/account');
 }
 
-function updateForm(req, res) {
-    res.render('pets/update', {user: req.user});
+async function updateForm(req, res) {
+    let result = await Pet.findById(req.params.id);
+    res.render('pets/update', {user: req.user, result: result});
 }

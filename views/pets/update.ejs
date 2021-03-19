@@ -4,7 +4,7 @@
 
 <div class="text">
 <div class="form-cont">
-<form action="/pets/:id/update?_method=PUT" method="POST">
+<form action="/pets/<%= result.id %>/update?_method=PUT" method="POST">
     <label class="form-label">Name</label>
     <input type="text" name="name" class="form-input">
     <br />
