@@ -28,8 +28,10 @@
 <p>To view my Trello board, click below:</p>
 <a href="https://trello.com/b/K4B3Q6BX/project-2/">Click for Trello</a>
 <br />
+<br />
 <h2>Next Steps</h2>
 <ul>
 <li>Make app global by implementing a "search by location" function</li>
 <li>Add responsive design for mobile users</li>
+<li>Add more photo fields in form to allow for gallery display of each animal</li>
 </ul>
