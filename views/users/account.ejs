@@ -15,7 +15,7 @@
                     <h4><%= pet.name %></h4>
                     <h4><%= pet.category %></h4>
                     <br />
-                    <button class="edit-btn"><a href="/pets/<%= pet.id %>/update">Edit</a></button>
+                    <button class="edit-btn"><a href="/pets/<%= pet.id %>/update" class="edit-btn-a">Edit</a></button>
                     <form action="/pets/<%= pet._id %>?_method=DELETE" method="POST">
                     <button type="submit" class="delete-btn">Delete</button>
                     </form>
