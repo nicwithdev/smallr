@@ -77,10 +77,6 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.nav-active {
-  transform: translateX(0%);
-}
-
 /* INDEX */
 
 .landing {
@@ -514,7 +510,7 @@ nav {
     position: absolute;
     right: 0;
     height: 94vh;
-    top: 6vh;
+    top: 8vh;
     color: black;
     background-color: white;
     flex-direction: column;
@@ -527,6 +523,9 @@ nav {
   .burger {
     display: block;
     cursor: pointer;
+  }
+  .cat-gallery {
+    justify-content: center;
   }
 }
 
@@ -562,4 +561,7 @@ nav {
   .pick-category .category-list {
     width: 250px;
   }
+}
+.nav-active {
+  transform: translateX(0%);
 }
