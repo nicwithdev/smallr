@@ -125,10 +125,6 @@ nav {
   width: 40%;
 }
 
-.view-pets-btn:hover {
-  transform: translateY(-3%);
-}
-
 /* PETS INDEX */
 
 .pick-category {
@@ -491,6 +487,9 @@ nav {
 }
 
 @media screen and (max-width: 780px) {
+  body {
+    overflow-x: hidden;
+  }
   .landing .text {
     width: 100%;
   }
