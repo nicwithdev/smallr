@@ -17,12 +17,14 @@ nav {
   align-items: center;
   margin: 0px 30px;
   height: 8vh;
+  overflow-x: hidden;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-between;
   width: 33%;
+  overflow-x: hidden;
 }
 
 .nav-links a {
