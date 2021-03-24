@@ -290,7 +290,7 @@ nav {
 }
 
 .pet-edit {
-  height: 90px;
+  height: 200px;
   width: 200px;
   text-align: center;
   overflow-x: hidden;
@@ -441,7 +441,7 @@ nav {
     width: 50%;
   }
   .pet-edit {
-    height: 200px;
+    height: 260px;
     width: 200px;
     margin: 30px 0px;
     text-align: center;
