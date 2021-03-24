@@ -25,9 +25,6 @@
 <p>To view the app, click the link below:</p>
 <a href="https://smallr-app.herokuapp.com/">Click to View</a>
 <br />
-<p>To view my Trello board, click below:</p>
-<a href="https://trello.com/b/K4B3Q6BX/project-2/">Click for Trello</a>
-<br />
 <br />
 <h2>Next Steps</h2>
 <ul>
