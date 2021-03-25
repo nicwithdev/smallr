@@ -162,7 +162,7 @@ nav {
   border-top: none;
   display: flex;
   justify-content: center;
-  transform: translateY(200%);
+  transform: translateY(400%);
 }
 
 .list-active {
