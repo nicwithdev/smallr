@@ -21,14 +21,3 @@
 <li>Passport.js</li>
 <li>OAuth</li>
 </ul>
-<h2>Getting Started</h2>
-<p>To view the app, click the link below:</p>
-<a href="https://smallr-app.herokuapp.com/">Click to View</a>
-<br />
-<br />
-<h2>Next Steps</h2>
-<ul>
-<li>Make app global by implementing a "search by location" function</li>
-<li>Add responsive design for mobile users</li>
-<li>Add more photo fields in form to allow for gallery display of each animal</li>
-</ul>
